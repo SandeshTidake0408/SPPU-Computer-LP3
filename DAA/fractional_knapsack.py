@@ -3,8 +3,9 @@ class Item:
         self.value = value
         self.weight = weight
 
+
 def fractional_knapsack(capacity, value):
-    items.sort(key = lambda x : x.value/x.weight, reverse=True)
+    items.sort(key=lambda x: x.value/x.weight, reverse=True)
     total_value = 0.0
     current_weight = 0
 
@@ -18,13 +19,12 @@ def fractional_knapsack(capacity, value):
             total_value += item.value * fraction
             break
     return total_value
-    
 
 
 if __name__ == "__main__":
 
-    items = [Item(60,10), Item(100,20), Item(120,30)]
+    items = [Item(60, 10), Item(100, 20), Item(120, 30)]
     capacity = 50
-    
+
     max_value = fractional_knapsack(capacity, items)
     print(f"Maximum value we can obtain = {max_value}")
