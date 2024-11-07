@@ -4,7 +4,7 @@ class Item:
         self.weight = weight
 
 
-def fractional_knapsack(capacity, value):
+def fractional_knapsack(capacity, items):
     items.sort(key=lambda x: x.value/x.weight, reverse=True)
     total_value = 0.0
     current_weight = 0
